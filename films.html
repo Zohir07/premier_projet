@@ -10,7 +10,7 @@
         <script  src="css/bootstrap-4.5.2/js/bootstrap.min.js"></script>
         <script src="js/films.js"></script>
     </head>
-    <body>
+    <body  style : background="red"; >
         <h2>Gestion des films</h2><br/><br/>
         <button type="button" class="btn btn-secondary" onclick="montrer('divEnreg');">Enregistrer(C)</button>
         <button type="button" class="btn btn-success" onclick="envoyerLister();">Lister(R)</button>
@@ -18,7 +18,7 @@
         <button type="button" class="btn btn-danger" onclick="montrer('divEnlever');">Supprimer(D)</button>
         <div  id="divEnreg">
             <span class="fermer" onclick="cacher('divEnreg');">X</span>
-            <h4>Enregistrer un film</h4><br/>
+            <h4 style: color:"red;" >Enregistrer un film</h4><br/>
             <form  id="formEnreg"  enctype="multipart/form-data" name="formEnreg" action="serveur/enregistrer.php" 
             method="POST" onsubmit="return valider();"> 
                 <div class="form-group">
@@ -48,33 +48,11 @@
             <form  id="formLister"  name="formLister" action="serveur/lister.php" method="POST">
             </form>
            
-        </div>
-        <!--Formulaire pour Modifier-->
-        <div id="divFiche">
-            <form id="formFiche" name="formFiche" action="serveur/fiche.php" method="POST"
-             onSubmit="return validerNum('numoF');">
-                <h4>Modifier un film</h4>
-                <span  class="fermer" onClick="cacher('divFiche');">X</span>         
-                <div class="form-group">
-                    <label for="numoF">ID du film</label>
-                    <input type="text" class="form-control" id="numoF" name="numf"><br/>
-                    <button type="submit" class="btn btn-danger">Envoyer</button>
-                </div>
-            </form>
-        </div>
-         <!--formulaire pour Enlever-->
-        <div id="divEnlever">
-            <form id="formEnlever" name="formEnlever" action="serveur/enlever.php" method="POST"
-             onSubmit="return validerNum('numE');">
-                <h4>Supprimer un film</h4>
-                <span  class="fermer" onClick="cacher('divEnlever');">X</span>
-                <div class="form-group">
-                    <label for="numE">ID du film</label>
-                    <input type="text" class="form-control" id="numE" name="numf"><br/>
-                    <button type="submit" class="btn btn-danger">Envoyer</button>
-                </div>
-            </form>
-        </div>
+        </div
+		<div>
+		 SALUT
+		</div>
+        
       
     </body>
 </hmtl>
